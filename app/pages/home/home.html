@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Size: {{items.data.length}}
+    </ion-title>
+    <ion-buttons right>
+      <button (click)="add(50)">add 50</button>
+      <button (click)="rem(50)">remove 50</button>
+      <button (click)="reset()">reset</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+
+  <ion-list>
+
+    <single-item
+      *ngFor="let item of items.data"
+      [item]="item">
+    </single-item>
+
+  </ion-list>
+
+</ion-content>
